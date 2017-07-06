@@ -1,17 +1,17 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+    )
+end
+
+puts "3 Topics created"
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
-    body: " Ayyyyy wahtup is datboi time to
-            teach this kids a lesson about
-            how to deal with their enemies first
-            u say 1v1 me bro and then u go super
-            sayin cuz that is how u get the W,
-            always never turn ur back on u enemy
-            that is how u git stab real fast
-            but always remember some1 onc toll me
-            the word was gun roll me and always rememb
-            onl shoot sstars brake the mold"
-    )
+    body: " Insert generic blog postage here.",
+    topic_id: Topic.last.id 
+  )
 end
 
 puts "10 blog posts created"
@@ -24,20 +24,21 @@ puts "10 blog posts created"
 end
 
 puts "5 blog posts created"
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
-    subtitle: "My great service",
-    body: "Ayyyyy wahtup is datboi time to
-            teach this kids a lesson about
-            how to deal with their enemies first
-            u say 1v1 me bro and then u go super
-            sayin cuz that is how u get the W,
-            always never turn ur back on u enemy
-            that is how u git stab real fast
-            but always remember some1 onc toll me
-            the word was gun roll me and always rememb
-            onl shoot sstars brake the mold",
+    subtitle: "Ruby on Rails",
+    body: "You have to learn the code, before the code learns you.",
+    main_image: "http://placehold.it/600x400",
+    thumb_image: "http://placehold.it/350x200",
+    )
+end
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: "Angular",
+    body: "I have to learn the code, before the code learns me.",
     main_image: "http://placehold.it/600x400",
     thumb_image: "http://placehold.it/350x200",
     )
