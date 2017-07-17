@@ -59,4 +59,4 @@ gem 'devise', '~> 4.3'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
-gem 'dckraken_view_tool', git: 'https://github.com/DCBracken/dckraken_view_tool'
+gem 'devcamp_view_tool', '~> 0.1.0'
