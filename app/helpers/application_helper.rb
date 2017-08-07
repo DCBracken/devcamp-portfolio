@@ -9,16 +9,27 @@ module ApplicationHelper
     end
   end
 
+<<<<<<< HEAD
   def source_helper(layout_name)
     if session[:source]
       greeting = "Thanks for visiting me from #{session[:source]} and you are on the #{layout_name} layout"
       content_tag(:p, greeting, class: "source-greeting")
+=======
+  def source_helper(styles)
+    if session[:source]
+      greeting = "Thanks for visiting me from #{session[:source]}, please feel free to #{ link_to 'contact me', contact_path } if you'd like to work together."
+      content_tag(:div, greeting.html_safe, class: styles)
+>>>>>>> 8a8c879d648fd2de2d9f8ba1e15ce889ee5a1132
     end
   end
 
   def copyright_generator
+<<<<<<< HEAD
     DckrakenViewTool::Renderer.copyright 'Donovan Bracken', 'All rights reserved'
   end
+=======
+    DckrakenViewTool::Renderer.copyright 'Donovan Bracken', 'All rights reserved'  end
+>>>>>>> 8a8c879d648fd2de2d9f8ba1e15ce889ee5a1132
 
   def nav_items
     [
@@ -42,6 +53,10 @@ module ApplicationHelper
         url: portfolios_path,
         title: 'Portfolio'
       },
+      {
+        url: tech_news_path,
+        title: 'Tech News'
+      },
     ]
   end
 
@@ -53,10 +68,29 @@ module ApplicationHelper
     end
 
     nav_links.html_safe
+<<<<<<< HEAD
   end
 
   def active? path
     "active" if current_page? path
+=======
+  end
+
+  def active? path
+    "active" if current_page? path
+  end
+
+  def alerts
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generator alert
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "Donovan Bracken Portfolio", sticky: false)
+>>>>>>> 8a8c879d648fd2de2d9f8ba1e15ce889ee5a1132
   end
 
 end
