@@ -220,10 +220,20 @@ body {
 .tech-news a {
   color: green;
 }
-.tech-news a {
-  color: green;
+
+.app-card-container {
+  color: black;
+  text-align: left;
 }
 
-.tech-news > .card {
-  padding: 30px;
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.profile-img {
+  border: 1px solid grey;
+}
+
+.app-card-container a {
+  color: blue;
 }
